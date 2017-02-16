@@ -21,7 +21,6 @@ class Board extends React.Component {
     }
     var winner = this.checkWinner();
     if (winner){
-      //do stuff
       var winnerMsg = winner+' has won!'
       this.setState({winner: winner})
       this.setState({winnerText: winnerMsg})

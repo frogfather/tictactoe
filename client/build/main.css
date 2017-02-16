@@ -1,5 +1,16 @@
 body{
-  font-family: Verdana;
+  font-family: Arial;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  align-self: center;
+
+}
+
+h4{
+  color: #AA4499;
+  font-size: 40px;
+  text-shadow: 3px 3px 5px #440022;
 }
 
 .container {
@@ -10,6 +21,7 @@ body{
     height:330px;
     justify-content: center;
     align-content: center;
+    align-self: center;
 }
 
 .square {
@@ -28,21 +40,28 @@ body{
     background-color: #884499;
       }
 
+
+  @keyframes flash {
+    0% { background-color: red; left: -25px; top:-25px;}
+    25% { background-color: blue; left:25px; top:-25px;}
+    50% { background-color: yellow; left:25px; top:25px;}
+    75% { background-color: orange; left:-25px; top:25px;}
+    100% { background-color: green; left:-25px; top:-25px;}
+  }
   .winnerDiv {
+    margin-top: -250px;
     animation-duration: 3s;
-    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-name: flash;
+    position: relative;
+    text-align: center;
     font-size: 70px;
     color: tomato;
     text-shadow: 5px 5px 5px #888888;
   }    
 
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%;
-    }
-    to {
-      margin-left: 0%;
-      width:100%;
-    }
-  }
+button {
+  margin-left: 100px;
+  margin-top: 10px;
+  font-size: 24px;
+}
