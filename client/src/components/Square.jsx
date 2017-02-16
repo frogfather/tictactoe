@@ -1,12 +1,15 @@
 import React from 'react';
 
 class Square extends React.Component {
+
+  clickSquare(event) {
+    event.persist()
+    console.log(event)
+  }
+
   render(){
     return(
-      <div>
-        <h4>I'm so square</h4>
-
-      </div>
+        <div className='square'>{this.props.contents}</div>
     )
   }
 }
