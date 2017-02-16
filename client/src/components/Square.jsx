@@ -4,12 +4,12 @@ class Square extends React.Component {
 
   clickSquare(event) {
     event.persist()
-    console.log(event)
+    this.props.click({square: this.props.number, value: event.target.innerText})
   }
 
   render(){
     return(
-        <div className='square'>{this.props.contents}</div>
+        <div className='square' onClick={this.clickSquare.bind(this)}>{this.props.contents}</div>
     )
   }
 }
